@@ -5,14 +5,11 @@ import {
   MDBNavbar,
   MDBNavbarBrand,
   MDBNavbarNav,
-  MDBNavItem,
-  MDBNavLink,
   MDBIcon,
   MDBDropdown,
   MDBDropdownToggle,
   MDBDropdownMenu,
   MDBDropdownItem,
-  MDBBadge
 } from 'mdbreact';
 
 class TopNavigation extends Component {

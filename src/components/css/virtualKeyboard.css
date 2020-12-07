@@ -1,0 +1,22 @@
+.simple-keyboard.hg-layout-default .hg-button.thumbF {
+    background: #BACFFA;
+}
+.simple-keyboard.hg-layout-default .hg-button.indexF {
+    background: #B3F9A3;
+}
+.simple-keyboard.hg-layout-default .hg-button.middleF {
+    background: #F8F8A2;
+}
+.simple-keyboard.hg-layout-default .hg-button.ringF {
+    background: #FCD7A2;
+}
+.simple-keyboard.hg-layout-default .hg-button.smolF {
+    background: #FCCACB;
+}
+.hand-img{
+    width: 100%;
+    align-items: center;
+}
+.simple-keyboard.hg-layout-default .hg-button.hint{
+    box-shadow: 0px 0px 10px #000000;
+}
