@@ -12,13 +12,8 @@ export default class VirtualKeyboard extends React.Component {
         };
     }
 
-    onKeyPress = (button) => {
-        console.log("Button pressed", button);
-    }
-
     render(){
         let sharedProps = {
-            onKeyPress: button => this.onKeyPress(button),
             physicalKeyboardHighlightPress: true,
             physicalKeyboardHighlight: true,
             physicalKeyboardHighlightBgColor: "#000000",
@@ -70,7 +65,7 @@ export default class VirtualKeyboard extends React.Component {
                             }}
                             display={{
                                 "{escape}": "esc ⎋",
-                                "{space}": "________________________Space________________________",
+                                "{space}": "______________________Space______________________",
                                 "{tab}": "tab ⇥",
                                 "{backspace}": "backspace ⌫",
                                 "{enter}": "enter ↵",

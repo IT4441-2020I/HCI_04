@@ -1,7 +1,7 @@
 import React from 'react';
 import VirtualKeyboard from "../components/virtualKeyboard";
 import '../css/study.css'
-import {MDBCard, MDBCol, MDBRow} from "mdbreact";
+import {MDBBtn, MDBCard, MDBCardBody, MDBCardText, MDBIcon} from "mdbreact";
 import KeyboardEventHandler from 'react-keyboard-event-handler';
 
 export default class KeyLearn extends React.Component {
@@ -9,10 +9,12 @@ export default class KeyLearn extends React.Component {
         super(props);
         this.state={
             hintKey: "q",
-            handleKey: ["q"],
-            targetKey: "S",
+            handleKey: [""],
+            targetKey: "",
             correctKeyCount: 0,
-            keyCount: 0
+            keyCount: 0,
+            correctKeyCountColor: "",
+            correctPercentColor: ""
         }
     }
 
@@ -195,26 +197,60 @@ export default class KeyLearn extends React.Component {
                 keyCount: this.state.keyCount + 1
             })
         }
+        let p = this.state.correctKeyCount/this.state.keyCount;
+        if(p < 0.4) {
+            this.setState({
+                correctPercentColor: "#BB0000"
+            })
+        }else if(p >= 0.4 && p < 0.7){
+            this.setState({
+                correctPercentColor: "#F7B217"
+            })
+        }
+        else{
+            this.setState({
+                correctPercentColor: "#00BB00"
+            })
+        }
+    }
+
+    reload = ()=>{
+        this.generateKey();
+        this.setState({
+            correctKeyCount: 0,
+            keyCount: 0,
+            correctKeyCountColor: "",
+            correctPercentColor: ""
+        })
     }
 
     render(){
         return (
             <>
-                <MDBCard className="card-body target" style={{marginBottom: "50px"}}>
-                    <p className="targetKey">{this.state.targetKey}</p>
-                    <div className="info">
-                        <p>Số phím gõ đúng: {this.state.correctKeyCount}</p>
-                        <p>Tỉ lệ gõ đúng: {this.state.correctKeyCount >= 1 ? Math.round(this.state.correctKeyCount/this.state.keyCount*100) : 0}%</p>
+                <MDBCard color="mdb-color" text="white" className="text-center card-body target">
+                    <div className="target-content">
+                        <MDBCardText>{this.state.targetKey}</MDBCardText>
                     </div>
                 </MDBCard>
                 <VirtualKeyboard
                     highlightBgColor={this.state.highlightBgColor}
                     hintKey={this.state.hintKey}
                 />
+                <MDBCard className="m-3 stats">
+                    <MDBBtn gradient="blue" floating tag='a' onClick={()=>{this.reload()}}>
+                        <MDBIcon icon='redo-alt' />
+                    </MDBBtn>
+                    <MDBCardBody className="text-primary">
+                        <MDBCardText>
+                            Số phím gõ đúng: <b style={{color: this.state.correctKeyCountColor}}>{this.state.correctKeyCount}</b>
+                        </MDBCardText>
+                        <MDBCardText>
+                            Tỉ lệ gõ đúng: <b style={{color: this.state.correctPercentColor}}>{this.state.correctKeyCount >= 1 ? Math.round(this.state.correctKeyCount/this.state.keyCount*100) : 0}%</b>
+                        </MDBCardText>
+                    </MDBCardBody>
+                </MDBCard>
                 <KeyboardEventHandler
-                    handleKeys={["1","2","3","4","5","6","7","8","9","0","-","=","q","w","e","r","t","y","u",
-                        "i","o","p","[","]","a","s","d","f","g","h","j","k","l",";","'","z","x","c","v","b",
-                        "n","m",",","."]}
+                    handleKeys={["alphanumeric","-","=","[","]",";","'",",","."]}
                     handleEventType="keyup"
                     onKeyEvent={(key, e) =>{
                         this.handleKeyUp(key);
