@@ -34,7 +34,7 @@ export default class Practice extends React.Component {
 
     generateParagraph = ()=>{
         let nextKey = Math.floor(Math.random() * 3 + 1);
-        while(nextKey == this.state.lastRd){
+        while(nextKey === this.state.lastRd){
             nextKey = Math.floor(Math.random() * 3 + 1);
         }
         switch (nextKey){
