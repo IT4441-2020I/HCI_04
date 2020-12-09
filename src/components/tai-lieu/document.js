@@ -14,7 +14,7 @@ export default class Document extends React.Component {
     }
 
     componentDidMount() {
-        let sections = this.scrollSpyText.current.getElementsByTagName("h4");
+        let sections = this.scrollSpyText.current.getElementsByTagName("img");
         this.setState({ sections });
     }
 
@@ -42,14 +42,10 @@ export default class Document extends React.Component {
                     </MDBCol>
                     <MDBCol>
                         <MDBScrollspyText className="doc-scroll" onScroll={this.handleScroll} scrollSpyRef={this.scrollSpyText}>
-                            <h4 id="section1"></h4>
-                            <img className="document" src="/img/gioi-thieu-ban-phim.png"/>
-                            <h4 id="section2"></h4>
-                            <img className="document" src="/img/am-dau.png"/>
-                            <h4 id="section3"></h4>
-                            <img className="document" src="/img/am-chinh.png"/>
-                            <h4 id="section4"></h4>
-                            <img className="document" src="/img/am-cuoi.png"/>
+                            <img alt="img1" id="section1" className="document" src="/img/gioi-thieu-ban-phim.png"/>
+                            <img alt="img2" id="section2" className="document" src="/img/am-dau.png"/>
+                            <img alt="img3" id="section3" className="document" src="/img/am-chinh.png"/>
+                            <img alt="img4" id="section4" className="document" src="/img/am-cuoi.png"/>
                         </MDBScrollspyText>
                     </MDBCol>
                 </MDBRow>
