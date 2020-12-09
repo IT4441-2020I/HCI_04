@@ -8,6 +8,8 @@
     "mdbreact": "./mdbreact-4.25.0.tgz",
     "react": "^16.12.0",
     "react-big-calendar": "^0.20.2",
+    "react-countdown-clock-timer": "^2.1.2",
+    "react-diff-viewer": "^3.1.1",
     "react-dom": "^16.12.0",
     "react-draft-wysiwyg": "^1.13.2",
     "react-jvectormap": "^0.0.4",

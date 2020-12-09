@@ -1,6 +1,6 @@
 import React from 'react';
 import VirtualKeyboard from "../components/virtualKeyboard";
-import '../css/study.css'
+import '../../css/study.css'
 import {MDBBtn, MDBCard, MDBCardBody, MDBCardText, MDBIcon} from "mdbreact";
 import KeyboardEventHandler from 'react-keyboard-event-handler';
 

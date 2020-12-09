@@ -1,8 +1,7 @@
 import React from 'react';
 import VirtualKeyboard from "../components/virtualKeyboard";
-import '../css/study.css'
+import '../../css/study.css'
 import {MDBBtn, MDBCard, MDBCardText, MDBIcon} from "mdbreact";
-import KeyboardEventHandler from 'react-keyboard-event-handler';
 
 export default class WordLearn extends React.Component {
     constructor(props) {
@@ -164,9 +163,8 @@ export default class WordLearn extends React.Component {
                     </div>
                 </MDBCard>
                 <input
-                    type="text"
                     autocomplete="off"
-                    className="form-control form-control-lg"
+                    className="form-control form-control-lg study-input"
                     value={this.state.inputVal}
                     onChange={this.onInputChange}
                     onKeyDown={this.keydownHandler}
@@ -178,13 +176,6 @@ export default class WordLearn extends React.Component {
                 <MDBBtn className="stats" gradient="blue" floating tag='a' onClick={()=>{this.reload()}}>
                     <MDBIcon icon='redo-alt' />
                 </MDBBtn>
-                <KeyboardEventHandler
-                    handleKeys={["enter"]}
-                    handleEventType="keyup"
-                    onKeyEvent={(key, e) =>{
-                        console.log("enter");
-                    }}
-                />
             </>
         );
     }
