@@ -33,7 +33,7 @@ const SEEDS = [14, 0, 9, 10, 12, 7, 3, 4, 1, 2, 5, 13, 6, 11, 8];
 const Home = () => {
   const [dates, setDates] = useState([]);
   const [values, setValues] = useState([]);
-  const [parameters, setParameters] = useState({ words: 743, numbers: 42 });
+  const [parameters, setParameters] = useState({ words: 743, numbers: 42, personalRank: 132 });
   const [from, setFrom] = useState(fiveDayAgo);
   const [to, setTo] = useState(new Date());
 
@@ -54,13 +54,14 @@ const Home = () => {
 
     const dates = [];
     const values = [];
-    const parameters = { words: 0, numbers: 0 };
+    const parameters = { words: 0, numbers: 0 , personalRank: 0};
 
     while (start <= finish && start <= new Date()) {
       dates.push(new Date(start).toISOString().substring(0, 10));
       values.push(getValues(start, 50, 200));
       parameters.numbers += getValues(start, 0, 10);
       parameters.words += getValues(start, 0, parameters.numbers * 200);
+      parameters.personalRank += getValues(start, 10, 30);
       start.setDate(start.getDate() + 1);
     }
 
@@ -178,6 +179,12 @@ const Home = () => {
                             <strong>{"Số lần kiểm tra"}</strong>
                           </td>
                           <td>{parameters?.numbers || 0}</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <strong>{"Xếp hạng hiện tại"}</strong>
+                          </td>
+                          <td>{parameters?.personalRank || 0}</td>
                         </tr>
                       </tbody>
                     </MDBTable>
