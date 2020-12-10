@@ -8,20 +8,20 @@ import {
   MDBView,
   MDBTable,
   MDBDatePicker,
-  MDBBadge,
+  MDBBadge
 } from "mdbreact";
 import { Line } from "react-chartjs-2";
 
 const rankings = [
   { name: "Solo Daxua", wordsPerMinute: 400, change: 1 },
   { name: "HyTunCng", wordsPerMinute: 392, change: -1 },
-  { name: "bigcityboy", wordsPerMinute: 375, change: 2 },
+  { name: "bigcitymoi", wordsPerMinute: 375, change: 2 },
   { name: "cobengokngek", wordsPerMinute: 354, change: 100 },
   { name: "No Love", wordsPerMinute: 338, change: 34 },
   { name: "congchua2k3", wordsPerMinute: 335, change: 123 },
   { name: "boy dep trai", wordsPerMinute: 323, change: -3 },
-  { name: "anonymoú", wordsPerMinute: 322, change: -4 },
-  { name: "ưhatup", wordsPerMinute: 311, change: -1 },
+  { name: "anonymous", wordsPerMinute: 322, change: -4 },
+  { name: "whassup", wordsPerMinute: 311, change: -1 },
   { name: "Sérgio Vladimir F. N.", wordsPerMinute: 301, change: -1 },
 ];
 
@@ -126,7 +126,7 @@ const Home = () => {
         <MDBCard narrow>
           <MDBRow>
             <MDBCol xl="5" md="12" className="mb-4">
-              <MDBView cascade className="gradient-card-header primary-color">
+              <MDBView cascade className="gradient-card-header mdb-color">
                 <h4 className="h4-responsive mb-0 font-weight-bold">
                   Thống kê
                 </h4>
@@ -136,7 +136,7 @@ const Home = () => {
                 <MDBRow className="card-body pt-3">
                   <MDBCol md="12" className="mb-3">
                     <h4>
-                      <MDBBadge color="primary color" className="big-badge">
+                      <MDBBadge color="primary" className="big-badge">
                         Phạm vi
                       </MDBBadge>
                     </h4>
@@ -186,7 +186,7 @@ const Home = () => {
               </MDBCardBody>
             </MDBCol>
             <MDBCol xl="7" md="12" className="mb-4">
-              <MDBView cascade className="gradient-card-header primary-color">
+              <MDBView cascade className="gradient-card-header mdb-color">
                 <Line data={lineChartData} options={lineChartOptions} />
               </MDBView>
             </MDBCol>
@@ -197,7 +197,7 @@ const Home = () => {
         <MDBRow>
           <MDBCol md="12">
             <MDBCard narrow>
-              <MDBView cascade className="gradient-card-header  primary-color">
+              <MDBView cascade className="gradient-card-header  mdb-color">
                 <h4 className="h4-responsive mb-0 font-weight-bold">
                   Bảng xếp hạng
                 </h4>
@@ -223,7 +223,7 @@ const Home = () => {
                   <tbody>
                     {rankings.map((el, index) => (
                       <tr className="d-flex" key={index}>
-                        <td className="col-2 text-center">{index}</td>
+                        <td className="col-2 text-center">{index+1}</td>
                         <td className="col-6">{el.name}</td>
                         <td className="col-2 text-center">
                           {el.wordsPerMinute}

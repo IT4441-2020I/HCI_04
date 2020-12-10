@@ -233,8 +233,8 @@ class App extends Component {
       case '/hoc-go/hoc-go-cau':
         locationString = 'Học gõ câu';
         break;
-      case '/luyen-tap':
-        locationString = 'Luyện tập';
+      case '/kiem-tra':
+        locationString = 'Kiểm tra';
         break;
 
       default:
