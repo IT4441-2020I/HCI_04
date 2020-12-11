@@ -1,15 +1,27 @@
 import React from 'react';
 import Keyboard from 'react-simple-keyboard';
 import 'react-simple-keyboard/build/css/index.css';
-import "../css/virtualKeyboard.css"
+import "../../css/virtualKeyboard.css"
 import {MDBCol, MDBRow} from "mdbreact";
 
 export default class VirtualKeyboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            input: "",
+            input: ""
         };
+    }
+
+    handVisibility = ()=>{
+        if(!this.props.disableHand) {
+            return (
+                <MDBRow center>
+                    <MDBCol size="5">
+                        <img alt="hand" className="hand-img" src="/img/hand.png"/>
+                    </MDBCol>
+                </MDBRow>
+            )
+        }
     }
 
     render(){
@@ -139,11 +151,7 @@ export default class VirtualKeyboard extends React.Component {
                         </MDBRow>
                     </MDBCol>
                 </MDBRow>
-                <MDBRow center>
-                    <MDBCol size="5">
-                        <img alt="hand" className="hand-img" src="/img/hand.png"/>
-                    </MDBCol>
-                </MDBRow>
+                {this.handVisibility()}
             </>
         );
     }

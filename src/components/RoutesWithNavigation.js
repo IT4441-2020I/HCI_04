@@ -219,13 +219,16 @@ class App extends Component {
         locationString = 'Trang chủ';
         break;
       case '/tai-lieu':
-        locationString = 'Tài liệu';
+        locationString = 'Tài liệu tốc ký';
         break;
       case '/hoc-go/hoc-go-phim':
         locationString = 'Học gõ phím';
         break;
       case '/hoc-go/hoc-go-am':
         locationString = 'Học gõ âm';
+        break;
+      case '/hoc-go/hoc-go-am':
+        locationString = 'Học gõ ký tự';
         break;
       case '/hoc-go/hoc-go-tu':
         locationString = 'Học gõ từ';
@@ -236,7 +239,15 @@ class App extends Component {
       case '/kiem-tra':
         locationString = 'Kiểm tra';
         break;
-
+      case '/soan-thao':
+        locationString = 'Soạn thảo văn bản';
+        break;
+      case '/tu-dien':
+        locationString = 'Tra từ điển';
+        break;
+      case '/faq':
+        locationString = 'Câu hỏi thường gặp';
+        break;
       default:
     }
     this.setState({

@@ -7,6 +7,9 @@ import WordLearn from "./hoc-go/wordLearn";
 import SentenceLearn from "./hoc-go/sentenceLearn";
 import Practice from "./luyen-tap/practice";
 import Document from "./tai-lieu/document";
+import Editor from "./soan-thao/editor";
+import Dictionary from "./tu-dien/dictionary";
+import Faq from "./faq/faq";
 
 const fourtOFour = () => <h1 className="text-center">404</h1>
 
@@ -22,6 +25,9 @@ class Routes extends React.Component {
         <Route path='/hoc-go/hoc-go-cau' exact component={SentenceLearn} />
         <Route path='/kiem-tra' exact component={Practice} />
         <Route path='/tai-lieu' exact component={Document} />
+        <Route path='/soan-thao' exact component={Editor} />
+        <Route path='/tu-dien' exact component={Dictionary} />
+        <Route path='/faq' exact component={Faq} />
         <Route component={fourtOFour} />
       </Switch>
     );

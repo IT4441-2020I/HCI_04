@@ -13,16 +13,16 @@ import {
 import { Line } from "react-chartjs-2";
 
 const rankings = [
-  { name: "Solo Daxua", wordsPerMinute: 400, change: 1 },
-  { name: "HyTunCng", wordsPerMinute: 392, change: -1 },
-  { name: "bigcitymoi", wordsPerMinute: 375, change: 2 },
-  { name: "cobengokngek", wordsPerMinute: 354, change: 100 },
-  { name: "No Love", wordsPerMinute: 338, change: 34 },
-  { name: "congchua2k3", wordsPerMinute: 335, change: 123 },
-  { name: "boy dep trai", wordsPerMinute: 323, change: -3 },
-  { name: "anonymous", wordsPerMinute: 322, change: -4 },
-  { name: "whassup", wordsPerMinute: 311, change: -1 },
-  { name: "Sérgio Vladimir F. N.", wordsPerMinute: 301, change: -1 },
+  { name: "Solo Daxua", wordsPerMinute: 204, change: 1 },
+  { name: "HyTunCng", wordsPerMinute: 192, change: -1 },
+  { name: "bigcitymoi", wordsPerMinute: 191, change: 2 },
+  { name: "cobengokngek", wordsPerMinute: 185, change: 100 },
+  { name: "No Love", wordsPerMinute: 184, change: 34 },
+  { name: "congchua2k3", wordsPerMinute: 184, change: 123 },
+  { name: "boy dep trai", wordsPerMinute: 182, change: -3 },
+  { name: "anonymous", wordsPerMinute: 180, change: -4 },
+  { name: "whassup", wordsPerMinute: 179, change: -1 },
+  { name: "Sérgio Vladimir F. N.", wordsPerMinute: 177, change: -1 },
 ];
 
 const fiveDayAgo = new Date();
@@ -33,7 +33,8 @@ const SEEDS = [14, 0, 9, 10, 12, 7, 3, 4, 1, 2, 5, 13, 6, 11, 8];
 const Home = () => {
   const [dates, setDates] = useState([]);
   const [values, setValues] = useState([]);
-  const [parameters, setParameters] = useState({ words: 743, numbers: 42, personalRank: 132 });
+  const [avgValues, setAvgValues] = useState([]);
+  const [parameters, setParameters] = useState({ words: 0, numbers: 0, personalRank: 0 });
   const [from, setFrom] = useState(fiveDayAgo);
   const [to, setTo] = useState(new Date());
 
@@ -54,19 +55,22 @@ const Home = () => {
 
     const dates = [];
     const values = [];
+    const avgValues = [];
     const parameters = { words: 0, numbers: 0 , personalRank: 0};
 
     while (start <= finish && start <= new Date()) {
       dates.push(new Date(start).toISOString().substring(0, 10));
       values.push(getValues(start, 50, 200));
+      avgValues.push(162);
       parameters.numbers += getValues(start, 0, 10);
       parameters.words += getValues(start, 0, parameters.numbers * 200);
-      parameters.personalRank += getValues(start, 10, 30);
+      parameters.personalRank += getValues(start, 5, 10);
       start.setDate(start.getDate() + 1);
     }
 
     setDates(dates);
     setValues(values);
+    setAvgValues(avgValues);
     setParameters(parameters);
   }, [from, to]);
 
@@ -74,7 +78,7 @@ const Home = () => {
     labels: dates,
     datasets: [
       {
-        label: "Words Per Minute",
+        label: "Tốc độ gõ (wpm)",
         backgroundColor: "rgba(255,255,255,0.4)",
         borderColor: "#fff",
         pointBackgroundColor: "transparent",
@@ -83,6 +87,26 @@ const Home = () => {
         pointBorderWidth: 1,
         data: values,
       },
+      {
+        label: "Tốc độ gõ trung bình",
+        fill: true,
+        lineTension: 0.3,
+        borderColor: "#FFFF00",
+        borderCapStyle: "butt",
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJoinStyle: "miter",
+        pointBorderColor: "rgb(205, 130,1 58)",
+        pointBackgroundColor: "rgb(255, 255, 255)",
+        pointBorderWidth: 10,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: "rgb(0, 0, 0)",
+        pointHoverBorderColor: "rgba(220, 220, 220,1)",
+        pointHoverBorderWidth: 2,
+        pointRadius: 1,
+        pointHitRadius: 10,
+        data: avgValues
+      }
     ],
   };
 
@@ -144,7 +168,7 @@ const Home = () => {
                     <div className="mb-1">
                       <MDBRow>
                         <MDBCol size="6">
-                          <small className="grey-text">from:</small>
+                          <small className="grey-text">Từ ngày:</small>
                           <MDBDatePicker
                             className="my-0 d-inline ml-3"
                             getValue={(e) => setFrom(e)}
@@ -152,7 +176,7 @@ const Home = () => {
                           />
                         </MDBCol>
                         <MDBCol size="6">
-                          <small className="grey-text">to:</small>
+                          <small className="grey-text">Đến ngày:</small>
                           <MDBDatePicker
                             className="my-0 d-inline ml-3"
                             getValue={(e) => setTo(e)}

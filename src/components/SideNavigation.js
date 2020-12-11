@@ -52,6 +52,21 @@ class SideNavigation extends React.Component {
               <MDBIcon icon="pencil-ruler mr-2" />
               Kiểm tra
             </MDBSideNavLink>
+
+            <MDBSideNavLink topLevel to='/soan-thao' onClick={onLinkClick}>
+              <MDBIcon icon="edit mr-2" />
+              Soạn thảo
+            </MDBSideNavLink>
+
+            <MDBSideNavLink topLevel to='/tu-dien' onClick={onLinkClick}>
+              <MDBIcon icon="book mr-2" />
+              Từ điển
+            </MDBSideNavLink>
+
+            <MDBSideNavLink topLevel to='/faq' onClick={onLinkClick}>
+              <MDBIcon icon="question mr-2" />
+              FAQs
+            </MDBSideNavLink>
           </MDBSideNavNav>
         </MDBSideNav>
       </div>

@@ -35,17 +35,19 @@ export default class Document extends React.Component {
                     <MDBCol md="3">
                         <MDBListGroup>
                             <MDBListGroupItem href="#section1" active={this.state.active===0}>Giới thiệu bàn phím</MDBListGroupItem>
-                            <MDBListGroupItem href="#section2" active={this.state.active===1}>Quy tắc gõ âm đầu</MDBListGroupItem>
-                            <MDBListGroupItem href="#section3" active={this.state.active===2}>Quy tắc gõ âm chính</MDBListGroupItem>
-                            <MDBListGroupItem href="#section4" active={this.state.active===3}>Quy tắc gõ âm cuối</MDBListGroupItem>
+                            <MDBListGroupItem href="#section2" active={this.state.active===1}>Quy tắc gõ số và ký tự</MDBListGroupItem>
+                            <MDBListGroupItem href="#section3" active={this.state.active===2}>Quy tắc gõ âm đầu</MDBListGroupItem>
+                            <MDBListGroupItem href="#section4" active={this.state.active===3}>Quy tắc gõ âm chính</MDBListGroupItem>
+                            <MDBListGroupItem href="#section5" active={this.state.active===4}>Quy tắc gõ âm cuối</MDBListGroupItem>
                         </MDBListGroup>
                     </MDBCol>
                     <MDBCol>
                         <MDBScrollspyText className="doc-scroll" onScroll={this.handleScroll} scrollSpyRef={this.scrollSpyText}>
                             <img alt="img1" id="section1" className="document" src="/img/gioi-thieu-ban-phim.png"/>
-                            <img alt="img2" id="section2" className="document" src="/img/am-dau.png"/>
-                            <img alt="img3" id="section3" className="document" src="/img/am-chinh.png"/>
-                            <img alt="img4" id="section4" className="document" src="/img/am-cuoi.png"/>
+                            <img alt="img5" id="section2" className="document" src="/img/so-ky-tu.png"/>
+                            <img alt="img2" id="section3" className="document" src="/img/am-dau.png"/>
+                            <img alt="img3" id="section4" className="document" src="/img/am-chinh.png"/>
+                            <img alt="img4" id="section5" className="document" src="/img/am-cuoi.png"/>
                         </MDBScrollspyText>
                     </MDBCol>
                 </MDBRow>
