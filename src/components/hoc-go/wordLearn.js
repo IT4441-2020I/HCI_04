@@ -163,19 +163,20 @@ export default class WordLearn extends React.Component {
                     </div>
                 </MDBCard>
                 <input
-                    autocomplete="off"
+                    autoComplete="off"
                     className="form-control form-control-lg study-input"
                     value={this.state.inputVal}
                     onChange={this.onInputChange}
                     onKeyDown={this.keydownHandler}
                 />
                 <VirtualKeyboard
-                    highlightBgColor={this.state.highlightBgColor}
                     hintKey=" "
                 />
-                <MDBBtn className="stats" gradient="blue" floating tag='a' onClick={()=>{this.reload()}}>
-                    <MDBIcon icon='redo-alt' />
-                </MDBBtn>
+                <div className="stats">
+                    <MDBBtn gradient="blue" floating tag='a' onClick={()=>{this.reload()}}>
+                        <MDBIcon icon='redo-alt' />
+                    </MDBBtn>
+                </div>
             </>
         );
     }

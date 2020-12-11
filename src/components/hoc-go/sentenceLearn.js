@@ -120,12 +120,13 @@ export default class SentenceLearn extends React.Component {
                     onKeyDown={this.keydownHandler}
                 />
                 <VirtualKeyboard
-                    highlightBgColor={this.state.highlightBgColor}
                     hintKey=" "
                 />
-                <MDBBtn className="stats" gradient="blue" floating tag='a' onClick={()=>{this.reload()}}>
-                    <MDBIcon icon='redo-alt' />
-                </MDBBtn>
+                <div className="stats">
+                    <MDBBtn gradient="blue" floating tag='a' onClick={()=>{this.reload()}}>
+                        <MDBIcon icon='redo-alt' />
+                    </MDBBtn>
+                </div>
             </>
         );
     }

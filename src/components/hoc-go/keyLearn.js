@@ -233,7 +233,6 @@ export default class KeyLearn extends React.Component {
                     </div>
                 </MDBCard>
                 <VirtualKeyboard
-                    highlightBgColor={this.state.highlightBgColor}
                     hintKey={this.state.hintKey}
                 />
                 <MDBCard className="m-3 stats">

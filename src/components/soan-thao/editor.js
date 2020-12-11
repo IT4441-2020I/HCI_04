@@ -11,7 +11,10 @@ export default class Editor extends React.Component {
                     className="form-control form-control-lg editor-input"
                     rows={14}
                 />
-                <VirtualKeyboard disableHand={true}/>
+                <VirtualKeyboard
+                    disableHand={true}
+                    hintKey=" "
+                />
             </>
         );
     }
