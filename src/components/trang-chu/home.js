@@ -34,7 +34,7 @@ const Home = () => {
   const [dates, setDates] = useState([]);
   const [values, setValues] = useState([]);
   const [avgValues, setAvgValues] = useState([]);
-  const [parameters, setParameters] = useState({ words: 0, numbers: 0, personalRank: 0 });
+  const [parameters, setParameters] = useState({ words: 0, numbers: 0, personalRank: 37 });
   const [from, setFrom] = useState(fiveDayAgo);
   const [to, setTo] = useState(new Date());
 
@@ -64,7 +64,7 @@ const Home = () => {
       avgValues.push(162);
       parameters.numbers += getValues(start, 0, 10);
       parameters.words += getValues(start, 0, parameters.numbers * 200);
-      parameters.personalRank += 37;
+      parameters.personalRank = 37;
       start.setDate(start.getDate() + 1);
     }
 
