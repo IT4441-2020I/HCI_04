@@ -64,7 +64,7 @@ const Home = () => {
       avgValues.push(162);
       parameters.numbers += getValues(start, 0, 10);
       parameters.words += getValues(start, 0, parameters.numbers * 200);
-      parameters.personalRank += getValues(start, 5, 10);
+      parameters.personalRank += 37;
       start.setDate(start.getDate() + 1);
     }
 
