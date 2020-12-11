@@ -227,9 +227,6 @@ class App extends Component {
       case '/hoc-go/hoc-go-am':
         locationString = 'Học gõ âm';
         break;
-      case '/hoc-go/hoc-go-am':
-        locationString = 'Học gõ ký tự';
-        break;
       case '/hoc-go/hoc-go-tu':
         locationString = 'Học gõ từ';
         break;
