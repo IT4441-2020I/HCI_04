@@ -224,7 +224,7 @@ const Dictionary = () => {
             },
             {
                 tag: 'Âm cuối',
-                normalKey: '',
+                normalKey: 'y',
                 stenoKey: 'JN',
             },
             {
