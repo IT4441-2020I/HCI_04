@@ -101,17 +101,14 @@ export default class Faq extends React.Component {
                             tagClassName='d-flex justify-content-between'
                             onClick={() => this.toggleCollapse('collapse5')}
                         >
-                            Mất bao lâu để có thể thành thạo được việc gõ tốc ký?
+                            Người làm ra phần mềm này có đẹp trai không?
                             <MDBIcon
                                 icon={collapseID === 'collapse5' ? 'angle-up' : 'angle-down'}
                             />
                         </MDBCollapseHeader>
                         <MDBCollapse id='collapse5' isOpen={collapseID}>
                             <MDBCardBody>
-                                Trung bình 1 người sẽ mất khoảng 3-4 ngày để
-                                có thể làm quen và nhớ các phím tốc ký, 2-3 tuần để
-                                có thể nhớ được các quy tắc, 1-2 tháng để
-                                có thể gõ thành thạo.
+                                Có :)) Mặc dù câu hỏi không liên quan cho lắm.
                             </MDBCardBody>
                         </MDBCollapse>
                     </MDBCard>
@@ -121,14 +118,17 @@ export default class Faq extends React.Component {
                             tagClassName='d-flex justify-content-between'
                             onClick={() => this.toggleCollapse('collapse6')}
                         >
-                            Người làm ra phần mềm này có đẹp trai không?
+                            Mất bao lâu để có thể thành thạo được việc gõ tốc ký?
                             <MDBIcon
                                 icon={collapseID === 'collapse6' ? 'angle-up' : 'angle-down'}
                             />
                         </MDBCollapseHeader>
                         <MDBCollapse id='collapse6' isOpen={collapseID}>
                             <MDBCardBody>
-                                Có :)) Mặc dù câu hỏi không liên quan cho lắm.
+                                Trung bình 1 người sẽ mất khoảng 3-4 ngày để
+                                có thể làm quen và nhớ các phím tốc ký, 2-3 tuần để
+                                có thể nhớ được các quy tắc, 1-2 tháng để
+                                có thể gõ thành thạo.
                             </MDBCardBody>
                         </MDBCollapse>
                     </MDBCard>

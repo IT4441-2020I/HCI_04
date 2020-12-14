@@ -34,9 +34,9 @@ export default class KeyLearn extends React.Component {
                 break;
             case 2:
                 this.setState({
-                    hintKey: "w",
-                    handleKey: ["w"],
-                    targetKey: "K"
+                    hintKey: "a w",
+                    handleKey: ["a", "w"],
+                    targetKey: "TK"
                 })
                 break;
             case 3:
@@ -48,9 +48,9 @@ export default class KeyLearn extends React.Component {
                 break;
             case 4:
                 this.setState({
-                    hintKey: "r f",
-                    handleKey: ["r", "f"],
-                    targetKey: "N"
+                    hintKey: "r f n",
+                    handleKey: ["r", "f", "n"],
+                    targetKey: "NE"
                 })
                 break;
             case 5:
@@ -62,9 +62,9 @@ export default class KeyLearn extends React.Component {
                 break;
             case 6:
                 this.setState({
-                    hintKey: "u",
-                    handleKey: ["u"],
-                    targetKey: "*"
+                    hintKey: "u c k",
+                    handleKey: ["u", "c", "k"],
+                    targetKey: "*UY"
                 })
                 break;
             case 7:
@@ -76,9 +76,9 @@ export default class KeyLearn extends React.Component {
                 break;
             case 8:
                 this.setState({
-                    hintKey: "o l",
-                    handleKey: ["o", "l"],
-                    targetKey: "J"
+                    hintKey: "o l [",
+                    handleKey: ["o", "l", "["],
+                    targetKey: "JT"
                 })
                 break;
             case 9:
@@ -90,9 +90,9 @@ export default class KeyLearn extends React.Component {
                 break;
             case 10:
                 this.setState({
-                    hintKey: "[",
-                    handleKey: ["["],
-                    targetKey: "T"
+                    hintKey: "; [",
+                    handleKey: [";", "["],
+                    targetKey: "GT"
                 })
                 break;
             case 11:
@@ -104,9 +104,9 @@ export default class KeyLearn extends React.Component {
                 break;
             case 12:
                 this.setState({
-                    hintKey: "s",
-                    handleKey: ["s"],
-                    targetKey: "P"
+                    hintKey: "s d",
+                    handleKey: ["s", "d"],
+                    targetKey: "PH"
                 })
                 break;
             case 13:
@@ -125,9 +125,9 @@ export default class KeyLearn extends React.Component {
                 break;
             case 15:
                 this.setState({
-                    hintKey: "j",
-                    handleKey: ["j"],
-                    targetKey: "I"
+                    hintKey: "c j m",
+                    handleKey: ["c", "j", "m"],
+                    targetKey: "UIA"
                 })
                 break;
             case 16:
@@ -139,9 +139,9 @@ export default class KeyLearn extends React.Component {
                 break;
             case 17:
                 this.setState({
-                    hintKey: ";",
-                    handleKey: [";"],
-                    targetKey: "G"
+                    hintKey: "; '",
+                    handleKey: [";", "'"],
+                    targetKey: "GK"
                 })
                 break;
             case 18:
@@ -153,9 +153,9 @@ export default class KeyLearn extends React.Component {
                 break;
             case 19:
                 this.setState({
-                    hintKey: "c",
-                    handleKey: ["c"],
-                    targetKey: "U"
+                    hintKey: "c g",
+                    handleKey: ["c", "g"],
+                    targetKey: "US"
                 })
                 break;
             case 20:
@@ -167,9 +167,9 @@ export default class KeyLearn extends React.Component {
                 break;
             case 21:
                 this.setState({
-                    hintKey: "n",
-                    handleKey: ["n"],
-                    targetKey: "E"
+                    hintKey: "r g n",
+                    handleKey: ["r", "g", "n"],
+                    targetKey: "NSE"
                 })
                 break;
             case 22:

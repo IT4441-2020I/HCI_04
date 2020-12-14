@@ -179,9 +179,12 @@ export default class Practice extends React.Component {
                 <MDBBtn color="blue" onClick={this.toggle} rounded>
                     Nộp bài
                 </MDBBtn>
-                <MDBBtn className="stats" gradient="blue" floating tag='a' onClick={this.reload}>
-                    <MDBIcon icon='redo-alt' />
-                </MDBBtn>
+                <div className="stats">
+                    <MDBBtn gradient="blue" floating tag='a' onClick={this.reload}>
+                        <MDBIcon icon='redo-alt' />
+                    </MDBBtn>
+                </div>
+
                 <MDBModal size="lg" isOpen={this.state.modal} toggle={this.toggle} centered>
                     <MDBModalHeader toggle={this.toggle}>
                         <div style={{textAlign: "center"}}>Kết quả</div>
