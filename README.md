@@ -3,15 +3,11 @@ Bài tập lớn nhóm HCI_04
 
 Thành viên: 
 
-HCI_04 20173010 Đinh Trọng Đạt
-
-HCI_04 20173200 Nguyễn Đăng Khoa
-
-HCI_04 20173041 Nguyễn Đình  Đức
-
-HCI_04 20173475 Nguyễn Công Vượng
-
-HCI_04 20173331 Nguyễn Thiều Quang
+1. HCI_04 20173010 Đinh Trọng Đạt
+2. HCI_04 20173200 Nguyễn Đăng Khoa
+3. HCI_04 20173041 Nguyễn Đình  Đức
+4. HCI_04 20173475 Nguyễn Công Vượng
+5. HCI_04 20173331 Nguyễn Thiều Quang
 
 ## Hướng dẫn sử dụng
 
